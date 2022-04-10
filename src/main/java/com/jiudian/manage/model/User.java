@@ -1,24 +1,25 @@
 package com.jiudian.manage.model;
 
 public class User {
+    // 用户id
     private Integer userid;
-
+    // 账户名
     private String useraccount;
-
+    // 密码
     private String password;
-
+    // 真实姓名
     private String username;
-
+    // 年龄
     private Integer age;
-
+    // 权限 0-管理员 1-经理 2-员工 3-清洁员
     private Integer power;
-
+    // 工号
     private String idnumber;
-
+   // 总绩效
     private Double money;
-
+    // 图片地址
     private String photourl;
-
+    // 手机号码
     private String phonenumber;
 
     public Integer getUserid() {

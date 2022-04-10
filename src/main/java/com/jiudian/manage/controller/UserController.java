@@ -41,6 +41,7 @@ public class UserController {
                 signal.put(State.SuccessMessage);
                 signal.put("userid",login[0]);
                 signal.put("power",login[1]);
+                signal.put("useraccount",useraccount);
             }else {
                 signal.put(State.ErrorCode);
                 signal.put(State.ErrorMessage);

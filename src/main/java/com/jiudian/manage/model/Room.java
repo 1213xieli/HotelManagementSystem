@@ -1,14 +1,15 @@
 package com.jiudian.manage.model;
 
 public class Room {
+    // 房间id
     private Integer roomid;
-
+    // 房间位置
     private String local;
-
+    // 房间价格
     private Double money;
-
+    // 房间状态(0.停用，1.未预定，2.已预定，3.待清扫)
     private Integer state;
-
+    // 类型
     private Integer type;
 
     public Integer getRoomid() {

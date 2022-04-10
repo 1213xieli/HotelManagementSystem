@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
 
         Config config = configMapper.selectByPrimaryKey(1);
         config.setTotalroom(config.getTotalroom()+1);
-        config.setTotalmoney(config.getTotalmoney()+money);
+//        config.setTotalmoney(config.getTotalmoney()+money);
         configMapper.updateByPrimaryKeySelective(config);
 
         int insert = orderMapper.insertSelective(order);

@@ -94,6 +94,7 @@ function getroomList(){
 				$("#roomList").empty();
 				$("#roomList").append("<tr><th>位置</th><th>价格</th><th>状态</th><th>类型</th><th>操作</th></tr>");
 				state="未预定";
+
 				for(i in list){		
 					if(list[i].type=="1")
 						type="单人间";
@@ -153,7 +154,7 @@ function chooseRoomBtn(event){
 	var roomid=$(event.target).data("roomid");
 	choose=roomid;
 	for(i in list){
-		if(list[i].roomid=roomid){
+		if(list[i].roomid==roomid){
 			$("span").filter("#inputLocal").text(list[i].local);
 		}
 	}

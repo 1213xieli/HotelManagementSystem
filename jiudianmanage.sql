@@ -37,8 +37,8 @@ CREATE TABLE `config`  (
 -- ----------------------------
 -- Table structure for order
 -- ----------------------------
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE `order`  (
+DROP TABLE IF EXISTS `orderlist`;
+CREATE TABLE `orderlist`  (
   `orderid` int NOT NULL,
   `householdname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `ID` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -82,4 +82,8 @@ CREATE TABLE `user`  (
   PRIMARY KEY (`userid`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
+alter table user modify userid int auto_increment;
+alter table room modify roomid int auto_increment;
+alter table orderlist modify orderid int auto_increment;
+alter table config modify id int auto_increment;
 SET FOREIGN_KEY_CHECKS = 1;

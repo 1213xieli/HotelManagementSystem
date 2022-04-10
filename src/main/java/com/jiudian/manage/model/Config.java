@@ -1,22 +1,23 @@
 package com.jiudian.manage.model;
 
 public class Config {
+    // 配置id
     private Integer id;
-
+    // 经理工资百分比，
     private Double managesalary;
-
+    // 员工工资百分比，
     private Double staffsalary;
-
+    // 保洁员工资百分比，
     private Double cleanerssalary;
-
+    // 经理底薪，
     private Double manage;
-
+    // 员工底薪，
     private Double staff;
-
+    // 保洁员底薪
     private Double cleaner;
-
+    // 总金额
     private Double totalmoney;
-
+    // 总房间
     private Double totalroom;
 
     public Integer getId() {

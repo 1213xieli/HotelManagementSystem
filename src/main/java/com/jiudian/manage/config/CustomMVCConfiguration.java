@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.nio.charset.Charset;
@@ -12,6 +13,13 @@ import java.util.List;
 
 @Configuration
 public class CustomMVCConfiguration extends WebMvcConfigurerAdapter {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        String path = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\File\\";
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/File/**").addResourceLocations("file:"+path);
+    }
 
     @Bean
     public HttpMessageConverter<String> responseBodyConverter() {
