@@ -7,15 +7,15 @@ public class Order {
     private Integer orderid;
     // 住房姓名
     private String householdname;
-    // id
+    // 订单id
     private String id;
     // 开始时间，
     private Date starttime;
     // 结束时间，
     private Date endtime;
-    // 总价格，当
+    // 总价格
     private Double money;
-    // 前状态(已付款，待付款，已入住，未入住，已取消)
+    // 状态(已付款，待付款，已入住，未入住，已取消)
     private Integer state;
     // 房间id
     private Integer roomid;

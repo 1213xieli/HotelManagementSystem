@@ -60,7 +60,9 @@ public class RoomController {
     }
 
     @RequestMapping("/updateRoom.do")
-    public Map updateRoom(@RequestParam int roomid,@RequestParam(required = false,defaultValue = "null") String local,@RequestParam(required = false,defaultValue = "-1") double money,@RequestParam(required = false,defaultValue = "-1") int state,@RequestParam(required = false,defaultValue = "-1") int type){
+    public Map updateRoom(@RequestParam int roomid,@RequestParam(required = false,defaultValue = "null") String local,
+                          @RequestParam(required = false,defaultValue = "-1") double money,@RequestParam(required = false,defaultValue = "-1") int state,
+                          @RequestParam(required = false,defaultValue = "-1") int type){
         boolean b = roomService.updateRoom(roomid, local, money, state, type);
         StateSignal signal = new StateSignal();
         if(b){
